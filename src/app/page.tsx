@@ -87,7 +87,7 @@ export default function Login() {
           <button type="submit" className="bg-white hover:bg-gray-200 text-black font-bold py-2 px-4 rounded-full mb-4">LOG IN</button>
         </form>
         <p className={`m-0 text-sm text-gray-600`}>
-          Don't have an account? <Link href="/register" className='text-blue-400 hover:underline'>Register</Link>
+          Don&apos;t have an account? <Link href="/register" className='text-blue-400 hover:underline'>Register</Link>
         </p>
       </div>
     </main>
