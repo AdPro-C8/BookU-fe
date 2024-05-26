@@ -27,37 +27,41 @@ export default function Books() {
     }, []);
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Publisher</th>
-                    <th>Publish Date</th>
-                    <th>ISBN</th>
-                    <th>Page Count</th>
-                    <th>Category</th>
-                    <th>Download Count</th>
-                    <th>Photo Cover URL</th>
-                </tr>
-            </thead>
-            <tbody>
-                {books.map(book => (
-                    <tr key={book.id}>
-                        <td>{book.id}</td>
-                        <td>{book.title}</td>
-                        <td>{book.author}</td>
-                        <td>{book.publisher}</td>
-                        <td>{book.publishDate}</td>
-                        <td>{book.isbn}</td>
-                        <td>{book.pageCount}</td>
-                        <td>{book.category}</td>
-                        <td>{book.downloadCount}</td>
-                        <td>{book.photoUrl}</td>
+        <div className='flex'>
+            <table className='table-auto flex-1 border-collapse border'>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Publish Date</th>
+                        <th>ISBN</th>
+                        <th>Page Count</th>
+                        <th>Category</th>
+                        <th>Download Count</th>
+                        <th>Photo Cover URL</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {books.map(book => (
+                        <tr key={book.id}>
+                            <td className='border-collapse border'>{book.id}</td>
+                            <td className='border-collapse border'>{book.title}</td>
+                            <td className='border-collapse border'>{book.author}</td>
+                            <td className='border-collapse border'>{book.publisher}</td>
+                            <td className='border-collapse border'>{book.publishDate}</td>
+                            <td className='border-collapse border'>{book.isbn}</td>
+                            <td className='border-collapse border'>{book.pageCount}</td>
+                            <td className='border-collapse border'>{book.category}</td>
+                            <td className='border-collapse border'>{book.downloadCount}</td>
+                            <td className='border-collapse border'>
+                                <img alt={book.photoUrl} src={book.photoUrl}></img>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 }
