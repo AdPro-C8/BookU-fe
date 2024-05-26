@@ -28,7 +28,7 @@ export default function Home() {
     }).then(res => {
       console.log("Signing in", res);
       alert('Sign in successful')
-      router.push('/homepage');
+      router.push('/');
     }).catch(err => {
       console.log(err);
       setError("email", {
